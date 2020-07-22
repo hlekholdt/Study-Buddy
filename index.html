@@ -1,0 +1,110 @@
+<head>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  <script <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+  <script
+  src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<header>
+  <title>Animated Sidebar Menu</title>
+
+  <link rel="stylesheet" href= "https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link  rel="stylesheet" type="text/css" href="style.css">
+
+  <script type="text/javascript">
+
+    function openSlideMenu(){
+      document.getElementById('menu').style.width = '250px';
+      document.getElementById('content').style.marginLeft = '250px';
+    }
+    function closeSlideMenu(){
+      document.getElementById('menu').style.width = '0px';
+      document.getElementById('content').style.marginLeft = '0px';
+    }
+  </script>
+</header>
+
+<div id="content">
+  
+  <span class="slide">
+    <a href="#" onclick="openSlideMenu()">
+      <i class="fas fa-bars"></i>
+    </a>
+  </span>
+
+  <div id="menu" class="nav">
+    <a href="#" class= "close" onclick="closeSlideMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+    <ul>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">Open Libraries</a></li>
+      <li><a href="#">Study Subjects</a></li>
+      <li><a href="#">Invitations</a></li>
+      <li><a href="#">Friends</a></li>            <li><a href="#">My Classes</a></li>
+      <ol>
+        <li> CSE 131 </li>
+        <li> College Writing </li>
+        <li> Matrix Algebra </li>
+        <li> Management Comm. </li>
+      </ol>
+    </ul>
+    <button class ="Add Classes Btn">Add Classes</button>
+  </div>
+  
+  <h1>E - Study Buddy<h1>
+    <h2>With the new need for online education, do you need to get some work done? Let's do it together! You can study with any student regardless of their school. Study with friends in real time via 24/7 live virtual libraries and private study sessions.</h2> 
+  <button class ="Create New Session Btn">Create New Session</button>
+  <button class ="Join Existing Session Btn">Join Existing Session</button>
+</div>
+
+
+<div id="app">
+ 
+  <!-- <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/firestore.png?alt=media&token=56d039dc-4a6c-477b-a153-a4bb8234646f" /> -->
+  <!-- <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/hosting.png?alt=media&token=57c8adb6-08c4-43f7-9395-4c299896a36c" /> -->
+  <img src= "https://specials-images.forbesimg.com/imageserve/5e8507f3ff6c160006cdb219/960x0.jpg?fit=scale" />
+
+    <!-- ADD THE RSVP BUTTON HERE -->
+    <button id="startRsvp">RSVP</button>
+
+      
+</section>
+<hr>
+<section id="firebaseui-auth-container"></section>
+
+  <section id="description-container">
+      <h2>Please sign into your account to chat with your study buddy</h2>
+      <p>Press the call button to set up your video chat and if you sign in you can online chat with your study buddy.</p>
+  </section>
+
+  <section id="guestbook-container">
+    <h2>Discussion</h2>
+
+   <form id="leave-message">
+     <label>Leave a message: </label>
+     <input type="text" id="message">
+     <button type="submit">
+       <i class="material-icons">send</i>
+       <span>SEND</span>
+     </button>
+   </form>
+
+<section id="guestbook"></section>
+
+  </section>
+
+</div>
+
+<section onload="showMyFace()">
+ <video id="yourVideo" autoplay muted></video>
+ <video id="friendsVideo" autoplay></video>
+ <br />
+ <videobutton onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</videobutton>
+ 
